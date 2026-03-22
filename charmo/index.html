@@ -14,7 +14,7 @@
             --text-muted: #94a3b8;
         }
         * { box-sizing: border-box; margin: 0; padding: 0; }
-        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background-color: var(--bg-dark); color: var(--text-light); line-height: 1.6; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background-color: var(--bg-dark); color: var(--text-light); line-height: 1.6; overflow-x: hidden; }
         
         .lang-en { display: none; }
         .lang-en-active .lang-en { display: inline; }
@@ -24,16 +24,49 @@
         .lang-toggle-btn { position: fixed; top: 20px; right: 20px; padding: 8px 16px; background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2); border-radius: 20px; color: white; cursor: pointer; backdrop-filter: blur(10px); z-index: 1000; transition: all 0.3s; }
         .lang-toggle-btn:hover { background: rgba(255,255,255,0.2); }
         
-        .hero { text-align: center; padding: 8rem 2rem 4rem; background: linear-gradient(180deg, rgba(139, 92, 246, 0.1) 0%, var(--bg-dark) 100%); }
+        .hero { text-align: center; padding: 6rem 1rem 4rem; background: linear-gradient(180deg, rgba(139, 92, 246, 0.1) 0%, var(--bg-dark) 100%); }
         .hero h1 { font-size: 3.5rem; margin-bottom: 1rem; background: linear-gradient(to right, #a78bfa, #c084fc); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
         .hero p { font-size: 1.2rem; color: var(--text-muted); max-width: 600px; margin: 0 auto 2rem; }
         
+        .app-store-btn img { height: 60px; transition: transform 0.2s; }
+        .app-store-btn img:hover { transform: scale(1.05); }
+
+        .screenshots { display: flex; justify-content: center; gap: 2rem; flex-wrap: wrap; margin: 4rem auto; max-width: 1000px; padding: 0 1rem; }
+        .screenshot { 
+            width: 250px; 
+            height: 541px; /* iPhone roughly 19.5:9 */
+            border-radius: 35px; 
+            border: 6px solid #334155; 
+            box-shadow: 0 20px 40px rgba(0,0,0,0.4); 
+            background: var(--bg-card); 
+            overflow: hidden; 
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--text-muted);
+            text-align: center;
+            background-size: cover;
+            background-position: center;
+        }
+        /* Top Notch */
+        .screenshot::before {
+            content: '';
+            position: absolute; top: -1px; left: 50%; transform: translateX(-50%);
+            width: 120px; height: 25px;
+            background: #334155;
+            border-bottom-left-radius: 15px; border-bottom-right-radius: 15px;
+        }
+
         .features { padding: 4rem 2rem; display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; max-width: 1200px; margin: 0 auto; }
         .feature-card { background: var(--bg-card); padding: 2.5rem; border-radius: 1.5rem; border: 1px solid rgba(255,255,255,0.05); transition: transform 0.3s; }
         .feature-card:hover { transform: translateY(-5px); border-color: var(--primary); }
         .feature-icon { font-size: 3rem; margin-bottom: 1rem; color: var(--primary); }
         
-        footer { border-top: 1px solid rgba(255,255,255,0.1); padding: 3rem 2rem; text-align: center; margin-top: 4rem; }
+        .contact-info { text-align: center; margin: 4rem auto 0; padding: 2rem; background: rgba(255,255,255,0.02); border-radius: 1rem; max-width: 600px; }
+        .contact-info a { color: var(--primary); text-decoration: none; }
+        
+        footer { border-top: 1px solid rgba(255,255,255,0.1); padding: 3rem 2rem; text-align: center; margin-top: 2rem; }
         .footer-links { display: flex; justify-content: center; gap: 2rem; flex-wrap: wrap; margin-bottom: 2rem; }
         .footer-links a { color: var(--text-muted); text-decoration: none; transition: color 0.3s; border-bottom: 1px solid transparent; }
         .footer-links a:hover { color: var(--primary); border-bottom-color: var(--primary); }
@@ -49,6 +82,25 @@
         <h1>Charmo AI</h1>
         <p class="lang-tr">Senin Özel Yapay Zeka Asistanın. Sınırsız karakterlerle konuş, kendi danışmanını yarat ve özgün bir sohbet deneyimine adım at.</p>
         <p class="lang-en">Your Personal AI Assistant. Chat with limitless characters, create your own consultant, and step into an authentic conversational experience.</p>
+        
+        <a href="#" class="app-store-btn">
+            <!-- Apple Download Badge -->
+            <img src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/en-us?size=250x83&releaseDate=1276560000" alt="Download on the App Store">
+        </a>
+    </div>
+
+    <!-- Screenshots Section -->
+    <!-- GITHUB'a gercek resimleri yuklediginizde url('assets/screenshot1.png') kismiyla degistirebilirsiniz -->
+    <div class="screenshots">
+        <div class="screenshot" style="background-image: url('assets/screenshot1.png');">
+            <div><span class="lang-tr">Görüntü 1<br>(assets/screenshot1.png)</span><span class="lang-en">Screen 1<br>(assets/screenshot1.png)</span></div>
+        </div>
+        <div class="screenshot" style="background-image: url('assets/screenshot2.png');">
+            <div><span class="lang-tr">Görüntü 2<br>(assets/screenshot2.png)</span><span class="lang-en">Screen 2<br>(assets/screenshot2.png)</span></div>
+        </div>
+        <div class="screenshot" style="background-image: url('assets/screenshot3.png');">
+            <div><span class="lang-tr">Görüntü 3<br>(assets/screenshot3.png)</span><span class="lang-en">Screen 3<br>(assets/screenshot3.png)</span></div>
+        </div>
     </div>
 
     <div class="features">
@@ -71,15 +123,22 @@
             <p class="lang-en">Chat quickly and without messaging limits anytime, anywhere using the monthly or yearly subscription model.</p>
         </div>
         <div class="feature-card">
-            <div class="feature-icon">🎙</div>
-            <h3><span class="lang-tr">Üstün Okuma Kalitesi</span><span class="lang-en">Premium Voice Quality</span></h3>
-            <p class="lang-tr">Yapay zeka asistanınızın yazdıklarını yüksek kaliteli (Premium) donanımsal ses desteğiyle canlı gibi dinleyin.</p>
-            <p class="lang-en">Listen to your AI assistant's messages vividly with high-quality hardware voice synthesis support.</p>
+            <div class="feature-icon">📖</div>
+            <h3><span class="lang-tr">Kullanım Kılavuzu</span><span class="lang-en">App User Guide</span></h3>
+            <p class="lang-tr">Uygulamanın nasıl çalıştığını öğrenmek ve tüm detayları keşfetmek için kullanım rehberimize göz atın.</p>
+            <p class="lang-en">Check out our user guide to learn how the app works and discover all the specific details.</p>
         </div>
+    </div>
+
+    <div class="contact-info">
+        <h3><span class="lang-tr">İletişim</span><span class="lang-en">Contact Us</span></h3>
+        <p>Email: <a href="mailto:info@idakimi.com">info@idakimi.com</a></p>
+        <p>Phone: <a href="tel:+447441922077">+44 744 192 2077</a></p>
     </div>
 
     <footer>
         <div class="footer-links">
+            <a href="guide.html"><span class="lang-tr">Kullanım Kılavuzu</span><span class="lang-en">User Guide</span></a>
             <a href="support.html"><span class="lang-tr">Destek</span><span class="lang-en">Support</span></a>
             <a href="privacy.html"><span class="lang-tr">Gizlilik Politikası</span><span class="lang-en">Privacy Policy</span></a>
             <a href="terms.html"><span class="lang-tr">Kullanım Koşulları</span><span class="lang-en">Terms of Use</span></a>
