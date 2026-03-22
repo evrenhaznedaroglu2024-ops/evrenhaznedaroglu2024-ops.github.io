@@ -1,0 +1,1 @@
+Bu klasör içine sitenizdeki telefon ekranları için 'screenshot1.png', 'screenshot2.png' ve 'screenshot3.png' isimli resimleri yükleyebilirsiniz.
