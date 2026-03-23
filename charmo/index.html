@@ -17,7 +17,8 @@
         body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background-color: var(--bg-dark); color: var(--text-light); line-height: 1.6; overflow-x: hidden; }
         
         .lang-en { display: none; }
-        .lang-en-active .lang-en { display: inline; }
+        .lang-en-active .lang-en { display: block; }
+        .lang-en-active span.lang-en, .lang-en-active a.lang-en { display: inline; }
         .lang-en-active .lang-tr { display: none; }
         
         /* Language Toggle */
@@ -90,7 +91,6 @@
     </div>
 
     <!-- Screenshots Section -->
-    <!-- GITHUB'a gercek resimleri yuklediginizde url('assets/screenshot1.png') kismiyla degistirebilirsiniz -->
     <div class="screenshots">
         <div class="screenshot" style="background-image: url('assets/screenshot1.png');"></div>
         <div class="screenshot" style="background-image: url('assets/screenshot2.png');"></div>
