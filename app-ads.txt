@@ -2,6 +2,7 @@
 # Bu dosya bu GitHub Pages alan adindaki TUM uygulamalar icin gecerlidir.
 
 # --- Mevcut kayitlar ---
+google.com, pub-6901246177430455, DIRECT, f08c47fec0942fa0
 google.com, pub-3280740911723004, DIRECT, f08c47fec0942fa0
 e-planning.net, 2f3a04630ba9ba3f, RESELLER, c1ba615865ed87b2
 yango-ads.com, 322124469, DIRECT
